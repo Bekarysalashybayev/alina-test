@@ -1,0 +1,8 @@
+version: "3"
+services:
+  react-app:
+    build: .
+    ports:
+      - "5000:5000"
+    image: express-app:latest # имя Docker-образа
+    container_name: express_app_container # имя Docker-контейнера

@@ -1,0 +1,16 @@
+@use '@/assets/scss/colors' as *;
+
+.radio-group {
+  .title {
+    color: $color-black-1;
+    font-size: 12px;
+    margin-bottom: 11.5px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}

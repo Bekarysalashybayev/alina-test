@@ -1,0 +1,8 @@
+version: "3"
+services:
+  react-app:
+    build: .
+    ports:
+      - "3000:3000"
+    image: react-app:latest # имя Docker-образа
+    container_name: react_app_container # имя Docker-контейнера

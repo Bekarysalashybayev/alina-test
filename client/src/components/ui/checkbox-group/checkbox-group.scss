@@ -1,0 +1,15 @@
+@use '@/assets/scss/colors' as *;
+
+.checkbox-group {
+  .title {
+    color: $color-black-1;
+    font-size: 12px;
+    margin-bottom: 11.5px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

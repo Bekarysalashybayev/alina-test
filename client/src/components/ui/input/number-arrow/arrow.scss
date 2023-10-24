@@ -1,0 +1,22 @@
+.arrow {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    width: 14px;
+    height: 8px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@use '@/assets/scss/colors' as *;
+
+.dropdown {
+  font-size: 14px;
+  color: $color-black-1;
+  position: relative;
+  min-width: 250px;
+  max-width: 350px;
+  width: 100%;
+  user-select: none;
+
+  .label {
+    font-size: 12px;
+    margin-bottom: 11px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+
+    span.placeholder {
+      color: $color-grey;
+    }
+
+    .input {
+      flex-grow: 1;
+      border-bottom: 0.5px solid $color-grey;
+      padding-bottom: 4px;
+    }
+  }
+
+  &.error {
+    .label {
+      color: $color-red;
+    }
+
+    .input {
+      border-bottom-color: $color-red;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    padding: 10px 0 5px;
+
+    .item {
+      cursor: pointer;
+
+      &.selected {
+        color: $color-blue;
+        font-weight: 550;
+      }
+
+      &:not(.selected):hover {
+        color: $color-black;
+      }
+    }
+  }
+
+  &:not(.block) .dropdown__body {
+    position: absolute;
+    background-color: $color-white;
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+}

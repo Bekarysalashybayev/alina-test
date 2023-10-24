@@ -1,0 +1,73 @@
+@use '@/assets/scss/breakponts' as *;
+
+.app-form {
+  .form-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .col-3 {
+      flex: 0 0 calc(30% - 6rem);
+
+    }
+
+    .col-4 {
+      flex: 0 0 calc(40% - 6rem);
+    }
+
+    .col-6 {
+      flex: 0 0 calc(60% - 6rem);
+    }
+
+    .col-3, .col-4, .col-6 {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+  }
+
+  .button-list {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    margin-top: 4rem;
+  }
+
+  @media screen and (max-width: $desktop) {
+    .form-row {
+      .first {
+        flex: 0 0 50%;
+      }
+
+      .second {
+        flex: 0 0 40%;
+      }
+    }
+
+    .button-list {
+      gap: 3rem;
+    }
+  }
+
+  @media screen and (max-width: $tab) {
+    .form-row {
+      .first {
+        flex: 0 0 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .button-list {
+      flex-wrap: wrap;
+
+      button {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

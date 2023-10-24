@@ -1,0 +1,54 @@
+@use '@/assets/scss/colors' as *;
+
+.input-wrapper {
+
+  label {
+    display: block;
+    color: $color-black-1;
+    font-size: 12px;
+    margin-bottom: 10px;
+
+    span {
+      color: $color-red;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+
+    input {
+      font-size: 14px;
+      padding: 5px 0;
+      border-bottom: 0.5px solid $color-grey;
+      flex-grow: 1;
+      color: $color-black-1;
+
+      &::placeholder {
+        color: $color-grey;
+      }
+    }
+  }
+
+  &.error-row {
+    label {
+      color: $color-red;
+    }
+
+    input {
+      border-bottom-color: $color-red;
+    }
+  }
+
+  .error {
+    color: $color-red;
+    font-size: 14px;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+}

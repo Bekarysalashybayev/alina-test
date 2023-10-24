@@ -1,0 +1,29 @@
+@use '@/assets/scss/colors' as *;
+
+.radio {
+  color: $color-black-1;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 7px;
+  cursor: pointer;
+
+  .circle {
+    width: 15px;
+    height: 15px;
+    border: 1px solid $color-blue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  &.selected .s {
+    width: 7px;
+    height: 7px;
+    background-color: $color-blue;
+    border-radius: 50%;
+  }
+}

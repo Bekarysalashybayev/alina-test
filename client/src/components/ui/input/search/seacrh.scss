@@ -1,0 +1,29 @@
+@use '@/assets/scss/colors' as *;
+
+
+.search-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: 7px 8px;
+  background-color: $bg-color;
+  border: 1px solid $color-blue;
+  border-radius: 8px;
+
+  input {
+    background-color: transparent;
+    border: 0;
+    font-size: 16px;
+    color: $color-black-1;
+
+    &::placeholder {
+      color: $color-grey;
+      letter-spacing: -0.408px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

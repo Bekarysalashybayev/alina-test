@@ -1,0 +1,49 @@
+@use '@/assets/scss/colors' as *;
+
+.table-row {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table.c-table {
+  font-weight: 400;
+  width: 100%;
+  line-height: 2.85;
+  min-width: 768px;
+
+  thead {
+    th {
+      color: $color-blue;
+      font-size: 14px;
+    }
+
+    tr:last-child {
+      th {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 0.5px solid $color-grey;
+    }
+
+    td {
+      color: $color-black-1;
+      font-size: 14px;
+      padding: 5px 5px 5px 0;
+
+      &:has(.actions) {
+        width: 78px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}

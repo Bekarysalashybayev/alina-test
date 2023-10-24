@@ -1,0 +1,33 @@
+@use '@/assets/scss/colors' as *;
+@use '@/assets/scss/breakponts' as *;
+
+.rdp {
+  --rdp-selected-color: #{$color-white};
+  --rdp-accent-color: #{$color-blue};
+  --rdp-caption-font-size: 1.6rem;
+  --rdp-cell-size: 4rem;
+}
+
+@media screen and (max-width: $tab) {
+  .rdp {
+    --rdp-selected-color: #{$color-white};
+    --rdp-accent-color: #{$color-blue};
+    --rdp-caption-font-size: 1.6rem;
+    --rdp-cell-size: 3.5rem;
+  }
+}
+
+.rdp-weeknumber, .rdp-day {
+  border-radius: 10px !important;
+}
+
+.date {
+  max-width: 300px;
+  overflow-x: auto;
+
+  .title {
+    color: $color-black-1;
+    font-size: 12px;
+    margin-bottom: 11px;
+  }
+}

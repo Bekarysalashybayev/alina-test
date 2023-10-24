@@ -1,0 +1,16 @@
+# Node.js and npm/yarn
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Build files
+build
+dist
+
+# Dependency lock files
+package-lock.json
+
+# Editor-related files
+.vscode
+.idea
+*.swp

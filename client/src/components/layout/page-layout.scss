@@ -1,0 +1,13 @@
+@use '@/assets/scss/colors' as *;
+@use '@/assets/scss/breakponts' as *;
+
+.page-layout {
+  padding: 4rem 3.2rem;
+
+  border-radius: 20px;
+  background: $color-white;
+
+  @media screen and (max-width: $tab) {
+    padding: 1.5rem;
+  }
+}

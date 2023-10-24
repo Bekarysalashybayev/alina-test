@@ -1,0 +1,30 @@
+@use '@/assets/scss/colors' as *;
+
+.checkbox {
+  color: $color-black-1;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 7px;
+  cursor: pointer;
+
+  .circle {
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      display: none;
+    }
+  }
+
+
+  &.selected .circle svg {
+    display: block;
+  }
+}

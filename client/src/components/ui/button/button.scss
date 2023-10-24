@@ -1,0 +1,62 @@
+@use "@/assets/scss/colors" as *;
+
+.custom-button {
+  color: $color-black-1;
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 1rem 1.2rem;
+  transition: all ease-in .1s;
+
+
+  &:enabled {
+    cursor: pointer;
+  }
+
+  &.primary {
+    border: 1px solid $color-blue;
+    background-color: $color-blue;
+    color: $color-white;
+
+    &:disabled {
+      opacity: .7;
+    }
+
+    &.outline {
+      background-color: transparent;
+      color: $color-blue;
+
+      &:disabled {
+        color: $color-grey;
+        border-color: $color-grey;
+      }
+    }
+  }
+
+  &.primary-light {
+    border: 1px solid $color-blue;
+    background-color: $bg-color;
+
+    &:disabled {
+      color: $color-grey;
+      border-color: $color-grey;
+    }
+  }
+
+
+
+  &.large {
+    padding: 1.4rem 5rem;
+  }
+
+  &.medium {
+    padding: 1.2rem 3rem;
+  }
+
+  &.rounded {
+    border-radius: 8px;
+  }
+
+  &:enabled:hover {
+    opacity: 0.9;
+  }
+}

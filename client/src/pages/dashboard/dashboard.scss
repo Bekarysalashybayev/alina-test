@@ -1,0 +1,80 @@
+@use "@/assets/scss/colors" as *;
+@use "@/assets/scss/breakponts" as *;
+
+
+.dashboard-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 6%;
+  margin-top: 6rem;
+
+  .col-3 {
+    flex: 0 0 25%;
+    order: 1;
+  }
+
+  .col-5 {
+    flex: 0 0 45%;
+    order: 2;
+  }
+
+  .col-2 {
+    flex: 0 0 18%;
+    order: 3;
+  }
+
+  .scroll-as {
+    flex: 0 0 100%;
+  }
+
+  @media screen and (max-width: calc($desktop-large - 1px)) {
+    flex-wrap: wrap;
+    gap: 6rem;
+
+    .scroll-as {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    .col-3 {
+      flex: 0 0 calc(60% - 3rem);
+      order: 1;
+    }
+
+    .col-5 {
+      flex: 0 0 100%;
+      order: 3;
+    }
+
+    .col-2 {
+      flex: 0 0 calc(40% - 3rem);
+      order: 2;
+    }
+  }
+  @media screen and (max-width: calc($tab - 1px)) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 4rem;
+
+    .col-3 {
+      order: 1;
+    }
+
+    .col-5 {
+      order: 2;
+    }
+
+    .col-2 {
+      order: 3;
+    }
+
+    .col-3, .col-5, .col-2 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+  }
+}
+

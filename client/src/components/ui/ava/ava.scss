@@ -1,0 +1,35 @@
+@use '@/assets/scss/colors' as *;
+@use '@/assets/scss/breakponts' as *;
+
+.ava {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: $color-blue;
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  .img {
+    min-width: 4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid $color-blue;
+    background-color: $color-grey;
+    overflow: hidden;
+
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    span {
+      display: none;
+    }
+  }
+}
